@@ -1,9 +1,11 @@
 package com.example.shopping_cart.service;
 
-import java.util.Collection;
+import com.example.shopping_cart.data.Cart;
+
+import java.util.List;
 
 public interface ShoppingService {
-    boolean addItem(int id);
+    Cart addItem(int item);
 
-    Collection<Integer> getItem();
+    List<Cart> getItem();
 }
