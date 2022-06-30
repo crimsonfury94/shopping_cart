@@ -5,7 +5,8 @@ import com.example.shopping_cart.data.Cart;
 import java.util.List;
 
 public interface ShoppingService {
-    Cart addItem(int item);
+
+    Cart addItem(Cart item);
 
     List<Cart> getItem();
 }

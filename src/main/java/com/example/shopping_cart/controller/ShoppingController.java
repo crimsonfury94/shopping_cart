@@ -17,8 +17,8 @@ public class ShoppingController {
         this.shoppingService = shoppingService;
     }
 
-    @GetMapping(path = "/add")
-    public Cart add(@RequestParam int item) {
+    @GetMapping(value = "/add")
+    public Cart add(@RequestParam Cart item) {
         return shoppingService.addItem(item);
     }
 
