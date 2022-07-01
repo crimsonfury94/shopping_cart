@@ -18,7 +18,7 @@ public class ShoppingController {
         this.shoppingService = shoppingService;
     }
 
-    @GetMapping(value = "/add")
+    @GetMapping(path = "/add")
     public boolean add(@RequestParam Integer item) {
         return shoppingService.addItem(item);
     }
