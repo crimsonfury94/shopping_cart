@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
 import java.util.List;
 
 @RestController
@@ -18,12 +19,12 @@ public class ShoppingController {
     }
 
     @GetMapping(value = "/add")
-    public Cart add(@RequestParam Cart item) {
+    public boolean add(@RequestParam Integer item) {
         return shoppingService.addItem(item);
     }
 
     @GetMapping(path = "/get")
-    public List<Cart> get() {
+    public Cart get() {
         return shoppingService.getItem();
     }
 }

@@ -4,27 +4,25 @@ import com.example.shopping_cart.data.Cart;
 import com.example.shopping_cart.service.ShoppingService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Service
 public class ShoppingServiceImpl implements ShoppingService {
 
+    private final Cart cart;
 
-    private final List<Cart> shoppingCart = new ArrayList<>();
+    public ShoppingServiceImpl(Cart cart) {
+        this.cart = cart;
+    }
 
 
     @Override
 
-    public Cart addItem(Cart item) {
-        Cart cart = new Cart();
-       shoppingCart.add(cart);
-        return cart;
+    public boolean addItem(Integer item) {
+        return cart.getCart().add(item);
     }
 
     @Override
-    public List<Cart> getItem() {
-        return shoppingCart;
+    public Cart getItem() {
+        return cart;
     }
 
 }
