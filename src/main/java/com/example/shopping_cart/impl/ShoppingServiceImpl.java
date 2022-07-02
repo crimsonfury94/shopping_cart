@@ -4,6 +4,7 @@ import com.example.shopping_cart.data.Cart;
 import com.example.shopping_cart.service.ShoppingService;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -17,8 +18,8 @@ public class ShoppingServiceImpl implements ShoppingService {
 
 
     @Override
-    public boolean addItem(Integer item) {
-        return cart.getCart().add(item);
+    public boolean addItem(List<Integer> item) {
+        return cart.getCart().addAll(item);
     }
 
     @Override

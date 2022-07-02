@@ -17,7 +17,7 @@ public class ShoppingController {
     }
 
     @GetMapping(path = "/add")
-    public boolean add(@RequestParam Integer item) {
+    public boolean add(@RequestParam List<Integer> item) {
         return shoppingService.addItem(item);
     }
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface ShoppingService {
 
-    boolean addItem(Integer item);
+    boolean addItem(List<Integer> item);
 
     List<Integer> getItem();
 }
