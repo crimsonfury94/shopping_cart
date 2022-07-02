@@ -4,7 +4,6 @@ import com.example.shopping_cart.data.Cart;
 import com.example.shopping_cart.service.ShoppingService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
